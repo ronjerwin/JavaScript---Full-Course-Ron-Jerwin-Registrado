@@ -1,4 +1,7 @@
 <!-- Lesson Journey & Time Stamp: -->
 
 <!-- Lesson 1: JavaScript Basics -->
-<!-- Stop at 13:55 -->
+<!-- Stops at 13:55 -->
+
+<!-- Lesson 2: Numbers and Math -->
+<!-- Stops at 42:20 -->
