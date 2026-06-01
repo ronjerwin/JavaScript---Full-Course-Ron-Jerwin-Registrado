@@ -5,3 +5,6 @@
 
 <!-- Lesson 2: Numbers and Math -->
 <!-- Stops at 42:20 -->
+
+<!-- Lesson 3: Strings -->
+<!-- Stops at 1:07:12 -->
