@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Variables</title>
+</head>
+<body>
+  <p>Cart Quantity:</p>
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+  <button onclick="
+    cartQuantity++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Add to Cart</button>
+  <button onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+  <button onclick="
+    cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+  <button onclick="
+    cartQuantity += 4;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+4</button>
+  <button onclick="
+    cartQuantity += 5;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+5</button>
+  <button onclick="
+    cartQuantity--;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Remove from cart</button>
+  <button onclick="
+    cartQuantity -= 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-2</button>
+  <button onclick="
+    cartQuantity -= 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-3</button>
+  <button onclick="
+    cartQuantity = 0;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Reset</button>
+  <script>
+    // Variables are like containers that hold values. We can use them to store and manipulate data in our programs.
+    // let variable1 = 3; // This variable holds the value 3
+    // console.log(variable1); // Output: 3
+
+    // Variable name restrictions:
+    // 1. Variable names must start with a letter, underscore (_), or dollar sign ($).
+    // 2. Variable names cannot start with a number.
+    // 3. Variable names cannot contain spaces or special characters (except for _ and $).
+    // 4. Variable names are case-sensitive (e.g., variable1 and Variable1 are different).
+    // 5. Variable names cannot be reserved keywords (e.g., let, const, var, if, else, etc.).
+
+    // ; (semicolon) is used to indicate the end of a statement in JavaScript. It helps the JavaScript engine understand where one statement ends and another begins. While it's not always required (JavaScript has automatic semicolon insertion), it's good practice to use it to avoid potential issues with code interpretation.
+
+    let cartQuantity = 0;
+
+    // Naming conventions:
+    // 1. camelCase: The first word is lowercase, and each subsequent word starts with an uppercase letter (e.g., cartQuantity, userName).
+    // 2. snake_case: Words are separated by underscores (e.g., cart_quantity, user_name).
+    // 3. PascalCase: Each word starts with an uppercase letter (e.g., CartQuantity, UserName).
+    // 4. kebab-case: Words are separated by hyphens (e.g., cart-quantity, user-name) - Note: This is not commonly used for variable names in JavaScript, but it is used for CSS class names.
+  </script>
+</body>
+</html>
