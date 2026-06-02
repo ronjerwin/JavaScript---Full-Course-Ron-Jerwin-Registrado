@@ -11,3 +11,6 @@
 
 <!-- Lesson 4: HTML CSS Reiew, console.log -->
 <!-- Stops at 1:50:00 -->
+
+<!-- Lesson 5: Variables -->
+<!-- Stops at 2:33:01 -->
