@@ -1,0 +1,49 @@
+<!-- HTML is the structure of a webpage -->
+<!-- CSS is used to style a webpage -->
+
+<!DOCTYPE html> 
+<!-- This is not an HTML element, this is a special line of code that tells the browser to use a modern version of HTML -->
+
+<html>
+  <head>
+    <style>
+      .btn {
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      background-color: rgb(105, 19, 19);
+      }
+
+      .blue-btn {
+      background-color: blue;
+      }
+      .green-btn {
+      background-color: green;
+      }
+      .red-btn {
+      background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="btn blue-btn" 
+    onclick="alert('Hello, World!');">Hello</button>
+    <p>
+      Pararaph of 
+      <button class="btn green-btn">Hello</button> text
+    </p>
+
+    <!-- Attribute is used to define how elements behave -->
+    <!-- Class is used to group elements together for styling -->
+
+    <button class="btn red-btn">CSS Attribute</button>
+
+    <script>
+      console.log('This is a JavaScript file linked to the HTML file.');
+      console.log(2 + 2); // This will log the result of 2 + 2 to the console, which is 4.
+
+    </script>
+  </body>
+</html>

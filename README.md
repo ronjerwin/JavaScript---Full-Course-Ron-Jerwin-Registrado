@@ -8,3 +8,6 @@
 
 <!-- Lesson 3: Strings -->
 <!-- Stops at 1:07:12 -->
+
+<!-- Lesson 4: HTML CSS Reiew, console.log -->
+<!-- Stops at 1:50:00 -->

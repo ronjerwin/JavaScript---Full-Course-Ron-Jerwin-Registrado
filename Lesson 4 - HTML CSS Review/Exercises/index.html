@@ -1,0 +1,64 @@
+
+
+<!-- 4f. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .btn {
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    .add-to-cart {
+      background-color: rgb(222, 247, 4);
+    }
+
+    .buy-now {
+      background-color: rgb(247, 162, 4);
+    }
+  </style>
+</head>
+<body>
+
+  <p>Adults Plain Cotton T-shirt</p>
+  <p>Price: $7.99</p>
+  <button class="btn add-to-cart" 
+  onclick="
+    alert('Added to cart!');
+  ">Add to cart</button>
+  <button class="btn buy-now"
+  onclick="
+    setTimeout(function() {
+      console.log('Payment successful!');
+      alert('Purchased');
+      
+    }, 1000);
+    console.log('Processing payment...');
+
+  ">Buy now</button>
+  
+  <br><br><br>
+  <!-- 4a. -->
+  <button title="Buttons">Click</button>
+
+  <!-- 4b. -->
+  <button>Ron Jerwin</button>
+  <button>Tortang Talong</button>
+
+  <!-- 4c. -->
+  <p>Hello, World!</p>
+
+  <!-- 4d. -->
+  <p>Today I'm learning JavaScript</p>
+
+  <!-- 4e. -->
+  <button>Add to cart</button>
+  <button>Buy now</button>
+
+  <!-- 4h. -->
+  <script>
+    console.log("Welcome to JavaScript!");
+  </script>
+</body>
+</html>
