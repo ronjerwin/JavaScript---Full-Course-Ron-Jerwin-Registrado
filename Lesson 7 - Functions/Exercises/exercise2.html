@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lesson 7 - Exercise - Functions</title>
+</head>
+<body>
+  
+
+
+  <script>
+    function convertToFahrenheit(celsius) {
+      const fahrenheit = (celsius * 9 / 5) + 32;
+      console.log(fahrenheit);
+    }
+    convertToFahrenheit(25);
+
+    function convertToCelsius(fahrenheit) {
+      const celsius = (fahrenheit - 32) * 5 / 9;
+      console.log(celsius);
+    }
+    convertToCelsius(86);
+
+    function convertTemperature(degrees, unit) {
+      if(unit === 'C') {
+       degrees = (degrees * 9 / 5) + 32;
+       return `${degrees}F`;
+      } else if(unit === 'F') {
+        degrees = (degrees - 32) * 5 / 9;
+        return `${degrees}C`;
+      }
+    }
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'F'));
+  </script>
+</body>
+</html>

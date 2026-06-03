@@ -14,3 +14,10 @@
 
 <!-- Lesson 5: Variables -->
 <!-- Stops at 2:33:01 -->
+
+<!-- Lesson 6: Booleans and If-Statement -->
+<!-- Stops at 3:33:01 -->
+
+<!-- Lesson 7: Functions -->
+<!-- Stops at 4:15:38 -->
+

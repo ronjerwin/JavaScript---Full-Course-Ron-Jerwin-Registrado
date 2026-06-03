@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Functions</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+  <button onclick="pickUserMove('Rock');
+  ">Rock</button>
+  <button onclick="pickUserMove('Paper');
+  ">Paper</button>
+  <button onclick="pickUserMove('Scissors');
+  ">Scissors</button>
+  <script>
+    let result = "";
+
+    function pickComputerMove() {
+      let computerMove = "";
+      const randomNum = Math.floor(Math.random() * 3 + 1);
+        if(randomNum == 1){
+          computerMove = 'Rock';
+        } else if (randomNum == 2) {
+          computerMove = 'Paper';
+        } else {
+          computerMove = 'Scissors';
+        }
+        // Return Statement
+        // Let's us get a value out of the function
+        return computerMove;
+    }
+
+    function pickUserMove(userPick) {
+      const computerMove = pickComputerMove();
+      if(computerMove === userPick){
+      result = 'Tie.';
+    } else if((computerMove === "Rock" && userPick === "Scissors") ||
+              (computerMove === "Paper" && userPick === "Rock")  ||
+              (computerMove === "Scissors" && userPick === "Paper")){
+      result = 'You Lose';
+    } else {
+      result = 'You Win';
+    }
+    alert(`You Picked: ${userPick}, Computer Picked: ${computerMove}. ${result}`);
+    }
+
+      // Rules for Parameter Names
+      // 1. Can't use special words
+      // Example: function
+      // 2. Can't start with a number
+      // 3. Can't use special characters
+      // except: $
+      // Best practice = use camelCase
+// ---------------------------------------------------------------------------
+      // Rules for function names:
+      // 1. Can't use special words. Example: function
+      // 2. Can't start with a number
+      // 3. Can't use special characters except: $_
+      // Best practice is camelCase
+  </script>
+</body>
+</html>
