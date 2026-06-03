@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock, Paper, Scissors Game</title>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <button onclick="
+    const randomNum1 = Math.floor(Math.random() * 3 + 1);
+    if(randomNum1 == 1){
+      const computerMove = 'Rock';
+      alert(`You pick Rock, Computer pick ${computerMove}. Tie.`);
+    } else if (randomNum1 == 2) {
+      const computerMove = 'Paper';
+       alert(`You pick Rock, Computer pick ${computerMove}. You Lose.`);
+    } else {
+      computerMove = 'Scissors';
+       alert(`You pick Rock, Computer pick ${computerMove}. You Win.`);
+    }
+  ">Rock</button>
+  <button onclick="
+  const randomNum2 = Math.floor(Math.random() * 3 + 1);
+    if(randomNum2 == 1){
+      const computerMove = 'Paper';
+      alert(`You pick Paper, Computer pick ${computerMove}. Tie.`);
+    } else if (randomNum2 == 2) {
+      const computerMove = 'Scissors';
+       alert(`You pick Paper, Computer pick ${computerMove}. You Lose.`);
+    } else {
+      computerMove = 'Rock';
+       alert(`You pick Paper, Computer pick ${computerMove}. You Win.`);
+    }
+  ">Paper</button>
+  <button onclick="
+    const randomNum3 = Math.floor(Math.random() * 3 + 1);
+    if(randomNum3 == 1){
+      const computerMove = 'Scissors';
+      alert(`You pick Scissors, Computer pick ${computerMove}. Tie.`);
+    } else if (randomNum3 == 2) {
+      const computerMove = 'Rock';
+       alert(`You pick Scissors, Computer pick ${computerMove}. You Lose.`);
+    } else {
+      computerMove = 'Paper';
+       alert(`You pick Scissors, Computer pick ${computerMove}. You Win.`);
+    }
+  ">Scissors</button>
+
+  <script>
+  </script>
+</body>
+</html>
