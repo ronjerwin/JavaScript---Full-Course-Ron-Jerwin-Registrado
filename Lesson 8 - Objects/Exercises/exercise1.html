@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Functions</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+  <button onclick="pickUserMove('Rock');
+  ">Rock</button>
+  <button onclick="pickUserMove('Paper');
+  ">Paper</button>
+  <button onclick="pickUserMove('Scissors');
+  ">Scissors</button>
+  <button onclick="
+    Game.wins = 0;
+    Game.losses = 0;
+    Game.ties = 0;
+  ">Reset Score</button>
+  <script>
+
+    const Game = {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    }
+
+    function pickComputerMove() {
+      let computerMove = "";
+      const randomNum = Math.floor(Math.random() * 3 + 1);
+        if(randomNum == 1){
+          computerMove = 'Rock';
+        } else if (randomNum == 2) {
+          computerMove = 'Paper';
+        } else {
+          computerMove = 'Scissors';
+        }
+        return computerMove;
+    }
+
+    function pickUserMove(userPick) {
+      const computerMove = pickComputerMove();
+      if(computerMove === userPick){
+      result = 'Tie.';
+    } else if((computerMove === "Rock" && userPick === "Scissors") ||
+              (computerMove === "Paper" && userPick === "Rock")  ||
+              (computerMove === "Scissors" && userPick === "Paper")){
+      result = 'You Lose';
+    } else {
+      result = 'You Win';
+    } 
+
+    if(result === 'You Win') {
+      Game.wins += 1;
+    } else if(result === 'You Lose') {
+      Game.losses += 1;
+    } else if(result === 'Tie.') {
+      Game.ties += 1;
+    }
+
+
+    alert(`You Picked: ${userPick}, Computer Picked: ${computerMove}. ${result}
+Wins: ${Game.wins}, Loses: ${Game.losses}, Ties: ${Game.ties}.
+    `);
+    }
+
+    
+
+  </script>
+</body>
+</html>
