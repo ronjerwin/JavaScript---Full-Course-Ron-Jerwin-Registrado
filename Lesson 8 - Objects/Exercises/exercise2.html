@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lesson 8 - Exercise - Objects</title>
+</head>
+<body>
+  
+  <script>
+  // Step 1: Create the basketball product object and display it
+  const basketball = {
+    name: 'basketball',
+    price: 2095
+  };
+  console.log(basketball);
+
+  // Step 2: Increase the price by 500 cents using dot notation
+  basketball.price += 500;
+  console.log(basketball);
+
+  // Step 3: Add 'delivery-time' using bracket notation
+  basketball['delivery-time'] = '3 days';
+  console.log(basketball);
+
+  // Step 4: Function to compare two product objects
+  function comparePrice(product1, product2) {
+    if (product1.price < product2.price) {
+      return product1; // Returns the whole object
+    } else {
+      return product2;
+    }
+  }
+
+  // Create 2 products to test the function
+  const item1 = { name: 'Upo', price: 50 };
+  const item2 = { name: 'Saging', price: 60 };
+
+  // Try out the function and log the result
+  console.log(comparePrice(item1, item2)); 
+
+
+
+  function isSameProduct(product1, product2) {
+    if(product1.name === product2.name && product1.price === product2.price){
+      return true;
+    } else {
+      return false;
+    }
+  }
+    const items1 = {name: 'Banana', price: 1200};
+    const items2 = {name: 'Banana', price: 1200};
+  console.log(isSameProduct(items1, items2))
+
+
+  const greet = 'Good Morning';
+  console.log(greet.toLowerCase());
+
+  const test = 'test';
+  console.log(test.repeat(2));
+
+  
+</script>
+</body>
+</html>

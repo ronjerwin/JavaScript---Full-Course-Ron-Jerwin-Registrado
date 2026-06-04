@@ -21,3 +21,5 @@
 <!-- Lesson 7: Functions -->
 <!-- Stops at 4:15:38 -->
 
+<!-- Lesson 8: Objects -->
+<!-- Stops at 5:25:40 -->
