@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Objects</title>
+</head>
+<body>
+    <!-- What is an Object? -->
+    <!-- An object groups multiple values together -->
+
+  <script>
+    // const address = {
+    //   Province: 'Bulacan',
+    //   City: 'Pulilan',
+    //   // Can add Functions inside object
+    //   Greet: () => {
+    //     console.log("Helloooo");
+    //   },
+    //   // Can add object inside object (Nesting)
+    //   barangayAddress: {
+    //     barangay: 'Dampol 2nd B.',
+    //     Street: 'Collantes',
+    //     HouseNumber: 183
+    //   }
+    // };
+    // // Can delete property of an object using delete
+    // delete address.HouseNumber;
+
+    // console.log(address.barangayAddress.HouseNumber);
+    // address.Greet();
+
+
+    const product = {
+      name: 'Shirt',
+      Quantity: 10,
+      // Brackets are optional
+      ['variation']: {
+        ['color']: 'Green',
+        size: 'Large'
+      }
+    };
+    console.log(product);
+    // using dot notation
+    console.log(product.name);
+    // Bracket notation is used when dot notation is not working or dot notation can't call the property name.
+    // using bracket notation
+    console.log(product['Quantity']);
+    // using bracket notation in nested object
+    console.log(product['variation']['color']);
+
+    // BUILT-IN METHODS
+
+    // JSON
+    // JSON.stringify() - USED TO CONVERT JAVASCRIPT OBJECT INTO A JSON STRING SO THAT WE CAN COMMUNICATE TO ANOTHER LANGUAGE.
+    // JSON.parse() - USED TO CONVERT JSON STRING BACK INTO JAVASCRIPT OBJECT.
+
+    // localStorage
+    // localStorage.setItem() - Used to save/store an item in localStorage.
+    // localStorage.getItem() - Used to get/retrieve an item from localStorage.
+    // localStorage.removeItem('item') - Used to remove a specific item from localStorage.
+    console.log('Hello'.length);
+    console.log('Hello'.charAt(2));
+    
+    const object4 = {
+      message: 'Hello',
+      price: 123
+    };
+    // This is the manual assignment for a object
+    // const message = object4.message;
+
+    // This is a distructuring, it is used to get the property of the object (object4) and store it to a variable that is the same name of the property.
+    const { message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    // SHORTHAND METHOD
+
+    const object5 = {
+      // message: message
+      message,
+      // method: () => {
+      //   console.log("Hello");
+      // },
+      method() {
+        console.log("Hello");
+      }
+    }
+  </script>
+</body>
+</html>
