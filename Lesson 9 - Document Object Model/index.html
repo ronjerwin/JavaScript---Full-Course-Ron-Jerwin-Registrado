@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document Object Model</title>
+</head>
+<body>
+  <!-- The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document (HTML or XML) as a tree of objects, which allows programming languages like JavaScript to access, change, and update the content, structure, and style of a web page dynamically. -->
+
+  <!-- Think of the DOM as the "bridge" between your HTML code and your JavaScript logic. When a browser loads a webpage, it creates this tree structure in memory.
+
+  How the DOM Tree Looks
+  Every element, attribute, and piece of text in your HTML becomes a "node" in the DOM tree.
+
+  A Concrete Example
+  Imagine you have a very simple HTML file: -->
+
+  <h1 id="main-title">Hello World!</h1>
+  <button id="my-button">Click Me</button>
+
+  <script>
+
+   // 1. Find the element in the DOM
+  const title = document.getElementById('main-title');
+  const button = document.getElementById('my-button');
+
+  // 2. Add an event listener to respond to user interaction
+  button.addEventListener('click', () => {
+    // 3. Change the content of the node
+    title.textContent = "You clicked the button!";
+    title.style.color = "blue";
+});
+    
+  </script>
+</body>
+</html>

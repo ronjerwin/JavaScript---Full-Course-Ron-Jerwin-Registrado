@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM - Exercise 2</title>
+</head>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button onclick="userGuess('Rock');">Rock</button>
+  <button onclick="userGuess('Paper');">Paper</button>
+  <button onclick="userGuess('Scissors');">Scissors</button>
+  <p id="result"></p>
+  <p id="playerMove"></p>
+  <p id="scoreIndicator">Wins: 0, Losses: 0, Ties: 0</p>
+  <button id="resetBtn">Reset Score</button>
+
+
+  <script>
+
+    const result = document.querySelector('#result');
+    const playerMove = document.querySelector('#playerMove');
+    const scoreIndicator = document.querySelector('#scoreIndicator');
+    const resetBtn = document.querySelector('#resetBtn');
+
+    resetBtn.onclick = function() {
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+
+      updateDisplay()
+
+      result.textContent = '';
+      playerMove.textContent = '';
+
+      localStorage.removeItem('score');
+    }
+
+    let computerMove = '';
+
+    const score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };
+
+    function playGame() {
+      const randomizer = Math.floor(Math.random() * 3 + 1);
+
+      if(randomizer === 1) {
+        computerMove = 'Rock';
+      } else if(randomizer === 2) {
+        computerMove = 'Paper';
+      } else {
+        computerMove = 'Scissors';
+      }
+      return computerMove;
+    }
+
+    function userGuess(guess) {
+
+      const computerMove = playGame();
+
+      if(computerMove === guess) {
+        result.textContent = 'Tie';
+      } else if((guess === 'Rock' && computerMove === 'Paper') || 
+                (guess === 'Paper' && computerMove === 'Scissors') ||
+                (guess === 'Scissors' && computerMove === 'Rock')) {
+        result.textContent = 'You Lose.';
+      } else {
+        result.textContent = 'You Win.'
+      }
+
+      if(result.textContent === 'You Win.') {
+        score.wins += 1;
+      } else if(result.textContent === 'You Lose.') {
+        score.losses += 1;
+      } else {
+        score.ties += 1;
+      }
+
+      playerMove.textContent = `Player Move: ${guess} | Computer Move: ${computerMove}`;
+
+      localStorage.setItem('score', JSON.stringify(score));
+
+      updateDisplay()
+    }
+
+    function updateDisplay() {
+      scoreIndicator.textContent = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+    }
+
+      updateDisplay()
+
+  </script>
+</body>
+</html>

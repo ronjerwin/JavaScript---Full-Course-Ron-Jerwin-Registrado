@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM - Exercise1</title>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button id="subs-btn">Subscribe</button>
+  <br><br><br>
+
+  <p>Rock Paper Scissors</p>
+  <a href="exercise2.html">Click here</a>
+  <br><br><br>
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Order under $40 = +$10 shipping.</p>
+  <p>Order over $40 = FREE shipping.</p>
+    <input id="costOfOrder" type="text" placeholder="Cost of order">
+    <button onclick="handleCalculation()">Calculate</button>
+    <p id="result"></p>
+
+
+
+  <script>
+    
+    const subscribeBtn = document.querySelector('#subs-btn');
+
+    subscribeBtn.addEventListener('click', function() {
+      if(subscribeBtn.textContent === 'Subscribe') {
+        subscribeBtn.textContent = 'Subscribed!';
+      } else {
+        subscribeBtn.textContent = 'Subscribe';
+      }
+    })
+
+  const costOfOrder = document.querySelector('#costOfOrder');
+
+    function handleCalculation() {
+      const result = document.querySelector('#result');
+
+      if(isNaN(costOfOrder.value)) {
+        result.textContent = 'Please Input Number';
+        return;
+      }
+
+          
+      if(costOfOrder.value < 40) {
+        result.textContent = `$${Number(costOfOrder.value) + 10}`;
+      } else {
+        result.textContent = `$${costOfOrder.value}`;
+      }
+
+    }
+
+
+     costOfOrder.addEventListener('keydown', function(event) {
+      // event.key === 'Enter' && handleCalculation();
+        if(event.key === 'Enter') {
+          handleCalculation();
+        }
+      });
+
+  
+    
+
+   
+     
+
+   
+
+  </script>
+</body>
+</html>

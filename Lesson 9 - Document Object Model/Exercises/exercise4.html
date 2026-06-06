@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM - Exerise 4</title>
+</head>
+<body>
+  
+  <p>Amazon Shipping Calculator</p>
+  <p>Order under $40 = +$10 shipping.</p>
+  <p>Order over $40 = FREE shipping.</p>
+    <input id="costOfOrder" type="text" placeholder="Cost of order">
+    <button onclick="handleCalculation()">Calculate</button>
+    <p id="result"></p>
+
+  <input onkeyup="handleKeyUp(event);" id="myInput" type="text" placeholder="Enter Text">
+  <p id="keyUpResult"></p>
+  <script>
+    const costOfOrder = document.querySelector('#costOfOrder');
+    const result = document.querySelector('#result');
+
+    function handleCalculation() {
+      if(costOfOrder.value < 40) {
+        result.textContent = `$${Math.round(Number(costOfOrder.value) + 10)}`;
+      } else {
+        result.textContent = `$${Math.round(costOfOrder.value)}`;
+      }
+    }
+
+    costOfOrder.addEventListener('keydown', (enter) => {
+      if(enter.key === 'Enter') {
+        handleCalculation();
+      }
+    })
+
+
+    function handleKeyUp(event) {
+      const keyUpResult = document.querySelector('#keyUpResult');
+      const myInput = document.querySelector('#myInput');
+
+        keyUpResult.textContent = myInput.value;
+    }
+  </script>
+</body>
+</html>

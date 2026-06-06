@@ -23,3 +23,6 @@
 
 <!-- Lesson 8: Objects -->
 <!-- Stops at 5:25:40 -->
+
+<!-- Lesson 9: Document Object Model -->
+<!-- Stops at 6:38:40 -->

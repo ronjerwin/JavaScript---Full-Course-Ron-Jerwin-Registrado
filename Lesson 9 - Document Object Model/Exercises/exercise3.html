@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM - Exercise 3</title>
+</head>
+<body>
+  
+  <button>9a</button>
+  <button id="secondBtn">9b</button> 
+  <br><br><br>
+
+  <button onclick="handleHeadsOrTails('Heads');">Heads</button>
+  <button onclick="handleHeadsOrTails('Tails');">Tails</button>
+  <p id="result"></p>
+
+  <input id="nameInput" type="text" placeholder="Name">
+  <button onclick="handleSubmit();">Submit</button>
+  <p id="nameResult"></p>
+  <script>
+
+    console.log(document.querySelector('button'));
+    document.querySelector('#secondBtn').textContent = '9b done!';
+
+    function handleHeadsOrTails(guess) {
+      if(guess === 'Heads') {
+        result.textContent = 'You chose: Heads';
+      } else {
+        result.textContent = 'You chose: Tails';
+      }
+    }
+
+    const nameInput = document.querySelector('#nameInput');
+
+    function handleSubmit() {
+      const nameResult = document.querySelector('#nameResult');
+
+      nameResult.textContent = `Your name is: ${nameInput.value}`;
+    }
+
+    nameInput.addEventListener('keydown', (event) => {
+      if(event.key === 'Enter') {
+        handleSubmit();
+      }
+    }) 
+    
+  </script>
+</body>
+</html>
