@@ -26,3 +26,6 @@
 
 <!-- Lesson 9: Document Object Model -->
 <!-- Stops at 6:38:40 -->
+
+<!-- Lesson 10: HTML, CSS, JavaScript Together -->
+<!-- Stops at 7:42:11 -->

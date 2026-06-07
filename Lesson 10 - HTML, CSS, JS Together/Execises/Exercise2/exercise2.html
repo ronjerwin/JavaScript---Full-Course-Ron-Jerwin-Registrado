@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Functions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+
+  <button class="moveBtn rockBtn" onclick="pickUserMove('Rock');
+  ">
+  <img class="playerMove rock" src="images\rock.png" alt="Rock">
+</button>
+  <button class="moveBtn paperBtn" onclick="pickUserMove('Paper');
+  ">
+  <img class="playerMove rock" src="images\paper.png" alt="Paper">
+</button>
+  <button class="moveBtn scissorsBtn" onclick="pickUserMove('Scissors');
+  ">
+  <img class="playerMove rock" src="images\scissors.png" alt="Scissors">
+</button> <br><br><br><br>
+<p class="winOrLose"></p>
+<p class="handleResult"></p>
+<p class="scoreStanding"></p>
+  
+  <button onclick="
+    Game.wins = 0;
+    Game.losses = 0;
+    Game.ties = 0;
+    ScoreStanding()
+    localStorage.removeItem('Game');
+  ">Reset Score</button>
+  <script src="script.js"></script>
+</body>
+</html>
