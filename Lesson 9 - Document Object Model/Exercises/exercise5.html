@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Variables</title>
+</head>
+<body>
+  <p>Cart Quantity:</p>
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+  <button onclick="
+    console.log(updateCartQuantity(1));  
+  ">Add to Cart</button>
+  <button onclick="
+    console.log(updateCartQuantity(2));
+  ">+2</button>
+  <button onclick="
+    console.log(updateCartQuantity(3));
+  ">+3</button>
+  <button onclick="
+   console.log(updateCartQuantity(4));
+  ">+4</button>
+  <button onclick="
+   console.log(updateCartQuantity(5));
+  ">+5</button>
+  <button onclick="
+   console.log(updateCartQuantity(-1));
+  ">Remove from cart</button>
+  <button onclick="
+   console.log(updateCartQuantity(-2))
+  ">-2</button>
+  <button onclick="
+   console.log(updateCartQuantity(-3));
+  ">-3</button>
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was reset.');
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Reset</button>
+  <p id="quantityResult"></p>
+  <script>
+    
+    let cartQuantity = 0;
+    const maxQuantity = 10;
+    const quantityResult = document.querySelector('#quantityResult');
+
+
+    function updateCartQuantity(value) {
+      const newCartQuantity = cartQuantity + value;
+      if(newCartQuantity > maxQuantity){
+        alert('The Cart is Full!');
+        return;
+      }
+
+      if(newCartQuantity < 0) {
+        alert('Not enough items in the cart');
+        return;       
+      }
+        cartQuantity += value;
+        quantityResult.textContent = `Cart Quantity: ${cartQuantity}`;
+    }
+  </script>
+</body>
+</html>
