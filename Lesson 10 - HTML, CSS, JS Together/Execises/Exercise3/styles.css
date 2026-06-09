@@ -22,3 +22,19 @@
   border-radius: 5px;
   margin-left: 10px;
 }
+
+.gamingBtn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.is-toggled {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise 4 - HTML, CSS, JS Together</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div>
+     <p id="calculationResult">0</p>
+    <button  onclick="
+      console.log(updateCalculation('1'));
+    ">1</button>
+    <button onclick="
+     console.log(updateCalculation('2'));
+    ">2</button>
+    <button onclick="
+     console.log(updateCalculation('3'));
+    ">3</button>
+    <button class="operatorBtn" onclick="
+     console.log(updateCalculation(' + '));
+    ">+</button>
+  </div>
+
+  <div>
+    <button onclick="
+     console.log(updateCalculation('4'));
+    ">4</button>
+    <button onclick="
+     console.log(updateCalculation('5'));
+    ">5</button>
+    <button onclick="
+     console.log(updateCalculation('6'));
+    ">6</button>
+    <button class="operatorBtn" onclick="
+     console.log(updateCalculation(' - '));
+    ">-</button>
+  </div>
+
+  <div>
+    <button onclick="
+     console.log(updateCalculation('7'));
+    ">7</button>
+    <button onclick="
+     console.log(updateCalculation('8'));
+    ">8</button>
+    <button onclick="
+     console.log(updateCalculation('9'));
+    ">9</button>
+    <button class="operatorBtn" onclick="
+     console.log(updateCalculation(' * '));
+    ">*</button>
+  </div>
+
+  <div>
+    <button onclick="
+     console.log(updateCalculation('0'));
+    ">0</button>
+    <button onclick="
+     console.log(updateCalculation('.'));
+    ">.</button>
+    <button onclick="
+     console.log(updateCalculation('='));
+    ">=</button>
+    <button class="operatorBtn" onclick="
+     console.log(updateCalculation(' / '));
+    ">/</button>
+  </div>
+
+  <div>
+  <button onclick="
+    calculation = '';
+    localStorage.removeItem('calculation');
+    calculationResult.textContent = '';
+  ">Clear</button>
+  </div>
+
+
+
+ 
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html> 
