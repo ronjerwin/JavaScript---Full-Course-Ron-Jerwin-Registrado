@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+      // Array Syntax
+      const myArray = [1, 23, 34, 65, 43];
+      console.log(myArray);
+
+      // If we want to reassign specific element/value in an array:
+      myArray[0] = 100; // This replace the first value into 100
+      console.log(myArray);
+
+      // In array, we can put different types of datatypes:
+      [1, 'String', true, [1, 2, 3], { name: 'Ron Jerwin' }];
+      // If we try to check the type of an array, it will apear as an object because array is an object.
+
+      // To check if a value is an array:
+      Array.isArray([1, 2, 3])
+      console.log(Array.isArray([1, 2, 3])); // TRUE
+
+      // To check the length of an array:
+      console.log(myArray.length);
+
+      // Array has a methods:
+      myArray.push(50); // This is add a value in the last index of an array.
+      myArray.pop(); // This is remove a value in the last index of an array.
+      myArray.unshift(50); // This is add a value in the first index of an array.   
+      myArray.unshift(); // This is remove a value in the first index of an array. 
+      
+      // Splice method is used to remove a value in a specific index.
+
+      // It has to value:
+      // First value is what index will be remove
+      // Second value is how many value will remove starting in the first given value
+      myArray.splice(0, 2); 
+      console.log(myArray)
+      
+      </script>
+</body>
+</html>

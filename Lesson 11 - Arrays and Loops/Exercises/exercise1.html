@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <h1>Todo List Practice 1</h1>
+    <input id="inputList" type="text" placeholder="Todo name">
+    <button onclick="handleAddList();">Add</button>
+    <div id="listContainer"></div>
+
+    <script>
+      const todoList = [];
+
+      function renderList() {
+        let todoListHTML = '';
+        const listContainer = document.querySelector('#listContainer');
+
+          for(let i = 0; i < todoList.length; i++) {
+            const list = todoList[i];
+            const html = `<p>${list}</p>`;
+            todoListHTML += html;
+          }
+
+          
+        listContainer.innerHTML = todoListHTML;
+      }
+     
+
+      function handleAddList() {
+
+        const inputList = document.querySelector('#inputList');
+        const name = inputList.value;
+        todoList.push(name);
+        renderList();
+        console.log(todoList);
+        inputList.value = '';
+      }
+
+      // // WHILE LOOP
+
+      // let index = 1;
+
+      // while(index <= 5) {
+      //   console.log(index);
+      //   index++;
+      // }
+
+      // // FOR LOOP
+
+
+      // for(let i = 1; i <= 5; i++) {
+      //   console.log('Hello' + i);
+      // }
+
+
+
+    </script>
+</body>
+</html>

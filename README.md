@@ -29,3 +29,6 @@
 
 <!-- Lesson 10: HTML, CSS, JavaScript Together -->
 <!-- Stops at 7:42:11 -->
+
+<!-- Lesson 11: Arrays and Loops -->
+<!-- Stops at 8:42:57 -->
